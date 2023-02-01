@@ -1,0 +1,145 @@
+:root {
+  --score-font: 4.5rem;
+  --title-font: 6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0);
+    font-size: var(--score-font);
+  }
+
+  50% {
+    transform: translateY(-7px);
+    font-size: calc(var(--score-font) + 5px);
+  }
+
+  100% {
+    transform: translateY(0);
+    font-size: var(--score-font);
+  }
+}
+
+@keyframes up-and-down-title {
+  0% {
+    transform: translateY(0);
+    font-size: var(--title-font);
+  }
+
+  50% {
+    transform: translateY(-4px);
+    font-size: calc(var(--title-font) + 4px);
+  }
+
+  100% {
+    transform: translateY(0);
+    font-size: var(--title-font);
+  }
+}
+
+body {
+  background-image: url(" https://media.giphy.com/media/BQRRM0T4C0MXZixwiu/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.my-container {
+  position: relative;
+  margin-top: 50px;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  user-select: none;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+  font-family: "Knewave", cursive;
+  animation: up-and-down-title 0.4s linear infinite;
+}
+
+.normal-score {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+  font-size: var(--score-font);
+  font-family: "Knewave", cursive;
+  color: white;
+}
+
+.pop-score {
+  font-size: calc(var(--score-font) + 1.5rem);
+  top: 80px;
+  z-index: 100;
+}
+
+.animated-text {
+  /* <h1> 這個變大的時候會把貓咪往下擠壓看起來好像貓咪在跳 */
+  /* <score> 點擊時會toggle掉這個class這樣才有辦法讓 rotate + pop */
+  animation: up-and-down 0.4s linear infinite;
+}
+
+#myImage {
+  margin: 100px auto;
+  width: 500px;
+  height: 500px;
+  background-image: url("https://popcat.click/img/p.1e9d00be.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  filter: drop-shadow(0 0 20px #ffff00);
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.myInput::placeholder {
+  color: #aaa;
+}
+
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+}
+
+.option-btn {
+  position: absolute;
+  top: 5px;
+  right: 105px;
+  color: white;
+}
+
+.mute-btn {
+  position: absolute;
+  top: 5px;
+  right: 45px;
+  color: white;
+}
+
+.display-none {
+  display: none;
+}
+
+.left {
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}

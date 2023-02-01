@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Cat</title>
+
+  <!--google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+  <!--font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+  <!--my css-->
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+  <div id="container" class="my-container">
+    <h1 id="title" class="title">Meow Meow!</h1>
+    <div id="score" class="normal-score animated-text"></div>
+    <!--cat-->
+    <div id="myImage"></div>
+    <!--input form-->
+    <div id="input-from" class="form-control form display-none">
+      <h1 class="left bold">CHANGE</h1>
+      <p class="form-control-plaintext left bold">Title</p>
+      <input id="title-input" class="myInput form-control mb-2" type="text" placeholder=" new title">
+      <p class="form-control-plaintext left bold">Image 1</p>
+      <input id="image-input-one" class="myInput form-control mb-2" type="text"
+        placeholder=" url of your base image...png">
+      <p class="form-control-plaintext left bold">Image 2</p>
+      <input id="image-input-two" class="myInput form-control mb-2" type="text"
+        placeholder=" url of your click image...png">
+      <p class="form-control-plaintext left bold">Background</p>
+      <input id="background-input" class="myInput form-control mb-2" type="text" placeholder=" url of your background">
+      <p class="form-control-plaintext left bold">Sound</p>
+      <input id="sound-input" class="myInput form-control mb-2" type="text" placeholder=" url of your sound...mp3">
+      <p class="form-control-plaintext left bold">BGM</p>
+      <input id="bgm-input" class="myInput form-control mb-3" type="text" placeholder=" url of your BGM...mp3">
+      <!--music credit--->
+
+      <!--input form buttons-->
+      <button id="send-btn" class="btn btn-primary send-btn mb-3">Send</button>
+      <button id="close-btn" class="btn btn-danger close-btn">
+        <i class="fa-sharp fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+
+  <!--option button-->
+  <button id="option-btn" class="btn btn-danger option-btn">
+    <i class="fa-solid fa-screwdriver-wrench"></i>
+  </button>
+  <!--mute button-->
+  <button id="mute-btn" class="btn btn-primary mute-btn">
+    <i id="valume-icon" class="fa-solid fa-volume-xmark"></i>
+  </button>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
